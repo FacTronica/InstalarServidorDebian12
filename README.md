@@ -1,7 +1,6 @@
 # InstalarServidorDebian12
 Pasos a seguir para instalar servidor debian para API Factronica
 
-
 ````
 ######################################################
 # SCRIPT PARA INSTALACION DE SERVIDOR API FACTRONICA
@@ -29,14 +28,13 @@ apt install mariadb-server -y
 apt install phpmyadmin -y
 #
 # APLICAR REGLAS DE SEGURIDAD A LA BASE DE DATOS
-# REFERENCIAS: https://linuxgenie.net/how-to-install-mariadb-on-debian-12-bookworm-distribution/
 mariadb-secure-installation
 #
 # ENTRAR A LA BASE DE DATOS POR CONSOLA
 mariadb -u root -p
 #
 # CREAR USUARIO ADMIN
-CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Softmadplus2020';
+CREATE USER 'admin'@'localhost' IDENTIFIED BY '---clave--aceso--bd---';
 #
 # ASIGNAR TODOS LOS PRIVILEGIOS AL ADMIN
 GRANT ALL PRIVILEGES ON *.* to 'admin'@'localhost';
@@ -78,18 +76,18 @@ local_umask=022
 /etc/init.d/vsftpd restart
 #
 # CREAR USUARIO
-useradd softmad
+useradd admin
 #
 # CAMBIAR LA CLAVE AL USUARIO CREADO
-passwd softmad
+passwd admin
 #
 # CREAR CARPETA DEL USUARIO
-mkdir /var/www/html/softmad
+mkdir /var/www/html/admin
 #
 # CREAR CARPETA PUBLICA DEL USUARIO
-mkdir /var/www/html/softmad/public_html
+mkdir /var/www/html/admin/public_html
 #
 # ASIGNAR PROPIETARIO DE LA CARPETA NUEVA
-chown -R softmad softmad
+chown -R admin admin
 #
 ````
