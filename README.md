@@ -1,7 +1,8 @@
 # InstalarServidorDebian12
 Pasos a seguir para instalar servidor debian para API Factronica
 
-´´´´
+
+````
 ######################################################
 # SCRIPT PARA INSTALACION DE SERVIDOR API FACTRONICA
 # SISTEMA OPERATIVO: DEBIAN 12 VERSION 2024
@@ -91,5 +92,4 @@ mkdir /var/www/html/softmad/public_html
 # ASIGNAR PROPIETARIO DE LA CARPETA NUEVA
 chown -R softmad softmad
 #
-#
-´´´´
+````
